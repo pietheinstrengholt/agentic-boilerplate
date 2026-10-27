@@ -1,0 +1,1 @@
+"""Wine Journal API package."""
