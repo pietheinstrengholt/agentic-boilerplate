@@ -2,6 +2,31 @@
 
 A small demo for first-time agentic engineering, built with Vue 3 and TypeScript, FastAPI, and MySQL 8. The current app has two screens: **sign in** and **welcome**. Wines, regions, tastings, and notes are ideas for later iterations; they are not implemented yet.
 
+## Use this implementation flow:
+Always start conversation in ChatGPT or Copilot; by asking questions and collecting context and ideas. Instead of saying; build a data product interface. Start with a question; what is data product? What makes a good interface? What relationships do data products have to other entities? How would a good database design look like? Attach documents or presentations for providing extra context. Discuss, brainstorm on ideas, challenge Copilot or ChatGPT on their answers.
+ 
+At some point turn the conversation into bringing ideas to an implementation. Give me a mockup or design of the interface. Tell Copilot or ChatGPT what you exactly want. Give your acceptance criteria as well.
+ 
+Then, Copilot or ChatGPT an instruction for building a detailed prompt for GitHub Coplot or Codex for implementing the design.
+ 
+Give me a detailed prompt for implementing X. Working rules 
+ 
+- It must adhere to the Agent.md files present in the repo.
+- Mention, that the design / mockup will be attached. Playwright must use this as a reference for comparing the implemented design against the mockup.
+- Include the HTML and CSS too if that helps building the design.
+- It must update the documentation.
+- Turn the prompt into a downloadable, copy paste ready Markdown file.
+- When testing and validating, use real-world business and human-friendly examples and input.
+- GitHub Copilot or Codex must report out and share evidence about the implementation, which included providing screenshots.
+ 
+After you are done ask Copilot or ChatGPT for writing a test prompt. So, Playwright will do an end-to-end test. For instance:
+ 
+```
+Give me a prompt for testing the full end to end process of the data issue life cycle. So moving between all the dialogs. Start with "NEW", "TRIAGE", "PLANNED", "IN_PROGRESS", "VERIFICATION", "CLOSED".
+ 
+Validate the data entered reached the backend. Fix any errors you encounter along the way. Improve APIs, or add missing database attributes. Check the dialogs for consistency and alignment as discussed in this chat. Use Playwright. The acceptance and success criteria is a fully end-to-end working data issue life cycle that can walk through all the steps.
+```
+
 ## Local database
 
 These are the development database commands. `CREATE` corrects the typo in the original example. Run the user and grant statements with a MySQL administrator account if they have not already been run:
